@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <math.h>
 
+/**What is the smallest number *n* by which the given number *x* must be divided
+to make it into a perfect square?
+n = find_number( x )
+*/
 int perfectSquare(int x){
   int aux;
   float n, y,y2, aux2;
