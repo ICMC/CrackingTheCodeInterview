@@ -4,7 +4,7 @@
 Suppose you have a matrix in the form of a 2 dimensional array.
 Write a method to read the rows of the matrix alternatively from
 right to left, left to right so on and return them as
- a 1 dimensional array. 
+a 1 dimensional array.
 
 for eg:
 1 2 3
