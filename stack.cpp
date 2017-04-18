@@ -4,6 +4,7 @@
 public class Stack<T>{
   private stackNode<T>{
     private T data;
+    private T preMin; // 3.2 
     private StackNode<T> next;
 
     public stackNode(T data){
@@ -17,7 +18,21 @@ public class Stack<T>{
   public T pop(){
     if(top.data == NULL) throw new EmptyStackExeption();
     T value = top.data;
+    min = top.prevMin;  // 3.2
     top = top.next;
+
+
+    /**3.2 -----------------------
+    public stackNode<T> aux;
+    if(value = min){
+      while(aux->next != NULL){
+        if(aux.data < min){
+           min = aux.data;
+        }
+        aux = aux->next;
+      }
+    }
+    */
     return value;
   }
 
@@ -28,6 +43,7 @@ public class Stack<T>{
       min = value;
     }else{
       if(value < min){
+        newNode.prevMin = min;
         min = value;
       }
     }
